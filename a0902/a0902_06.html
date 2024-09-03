@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>div와 span 차이</title>
+  <style>
+    div{width: 300px; height: 200px; border: 3px solid black;}
+    span{width: 300px; height: 200px; border: 3px solid black;}
+    #spanEx1{display: block; width: 150px; height: 50px; background-color: aquamarine;}
+    #spanEx2{display: inline-block; width: 150px; height: 50px;background-color: skyblue;}
+  </style>
+</head>
+<body>
+  <div>div 사각모델</div>
+  <div>div 사각모델</div> <!-- div는 옆에 공간이 있어도 무조건 아래로 붙음(줄바꿈) -->
+  <div>div 사각모델</div> <!-- 블록방식 -->
+
+  <span>span 사각모델</span> <!-- span은 옆으로 붙음(그냥 묶음) -->
+  <span>span 사각모델</span> <!-- 인라인 속성 -->
+  <span id="spanEx1">span <br/>block</span> 
+  <span>span 사각모델</span>
+  <span id="spanEx2">span <br/>inline-block</span>
+  <!-- span은 그냥 해서는 width, height 안 먹힘. 
+  style에서 display: block; (div처럼 아래로 붙음) 또는
+            display: inline-block;(span속성 살리면서 옆으로 붙고 width, height조절가능) -->
+</body>
+</html>
