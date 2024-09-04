@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <title>form</title>
+  <style>
+    id{
+      width: 200px;
+    }
+  </style>
+</head>
+<body>
+  <!--method(방식)에는 get(외부 노출), post(숨김)가 있다-->
+  <!--label: 글자 나타냄, input: 글자 쓸 수 있는 칸, 
+  fieldset: 폼 요소를 그룹으로 묶는 태그, legend: fieldset에 제목
+  size: 글자쓰는 칸 크기 조절. 하지만 style에서 조절하는 걸 추천
+  amxlength: 최대 글자수-->
+  <form action="http://www.daum.net" name="frm" method="get"> 
+    <label>아이디</label>
+    <input type="text" name="id" id="id" value="aabbcc" readonly><br/> <!--id 이름이 id여도 됨-->
+    <label>패스워드</label>
+    <input type="password" name="pw"><br/>    
+    <label>전화번호</label>
+    <input type="text" name="phone" readonly>
+    <br/><br/>
+
+    <!--radio-->
+    <label>성별</label><br/>
+    <input type="radio" name="gender" id="male" value="male">
+    <label for="male">남자</label>
+    <input type="radio" name="gender" id="female" value="female">
+    <label for="female">여자</label>
+    <br/><br/>
+
+    <!--name별로 세트를 구분함. name이 똑같은 것 중 하나 선택-->
+    <label>학년</label><br/>
+    <input type="radio" name="stuClass" id="one" value="one">
+    <label for="one">1학년</label>
+    <input type="radio" name="stuClass" id="two" value="two" checked> <!--checked: 디폴트값-->
+    <label for="two">2학년</label>
+    <input type="radio" name="stuClass" id="three" value="three">
+    <label for="three">3학년</label>
+    <br/><br/>
+
+    <label>반</label><br/>
+    <input type="number" name="stuClass">반<br/>
+
+    <!--값이 정해진 게 아닌 건 value를 넣음
+    checkbox는 여러 개의 변수로(배열) 받음-->
+    <label>취미</label><br/>
+    <input type="checkbox" name="hobby" id="game" value="game">
+    <label for="game">게임</label>
+    <input type="checkbox" name="hobby" id="golf" value="golf">
+    <label for="golf">골프</label>
+    <input type="checkbox" name="hobby" id="swim" value="swim">
+    <label for="swim">수영</label>
+    <input type="checkbox" name="hobby" id="run" value="run">
+    <label for="run">조깅</label>
+    <input type="checkbox" name="hobby" id="book" value="book">
+    <label for="book">독서</label>
+    <br/><br/>
+
+    <textarea name="content" cols="200" rows="80"></textarea>
+    <br/>
+
+    <!--<input type="submit">과 <button>
+      바로 보낼 때는 submit, 자바스크립트 호출할 때는 button-->
+    <input type="submit" value="로그인">
+    <br/>
+    <script>
+      //함수 선언
+      function frmBtn(){
+        //alert("함수를 호출합니다.");
+        var id = document.getElementById("id").value;
+        alert("input 박스에 입력된 id : " + id);
+        if(id==""){
+          alert("아이디 또는 전화번호를 입력해 주세요.");
+        }
+      }
+    </script>
+    <button type="button" onclick="frmBtn()">로그인</button> <!--onclick : 자바스크립트 호출-->
+  </form>
+</body>
+</html>

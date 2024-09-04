@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <title>네이버 : 로그인</title>
+  <style>
+    #main{
+      width: 480px;
+      height: 500px;
+      border: 1px solid #e1e3e5;
+      border-radius: 12px;
+      margin: 50px auto;
+    }
+    h1{
+      text-align: center;
+      color: rgb(16, 197, 98);
+      font-size: 60px;
+      font-weight: 900;
+    }
+    form{
+      width: 410px;
+      margin: 0 auto;
+    }
+    input{
+      width: 410px;
+      height: 40px;
+      margin-bottom: 10px;
+      font-size: 20px;
+    }
+    #err{
+      color: red;
+      font-weight: 700;
+    }
+    button{
+      width: 410px;
+      height: 40px;
+      margin-top: 30px;
+      background-color: #09aa5c;
+      border: none;
+      color: white;
+      font-size: 20px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>NAVER</h1>
+  </header>
+  <div id="main">
+    <section>
+      <form action="http://www.naver.com" method="get" name="loginFrm">
+        <input type="hidden" name="ip" value="127.0.0.1"><br/> <!--hidden: 서버로 넘기는 값 숨기기-->
+        <input type="text" name="id" id="id" placeholder="아이디 또는 전화번호" autofocus><br/>
+        <input type="text" name="pw" id="pw" placeholder="비밀번호"><br/>
+        <div id="err"></div>
+      <button type="button" onclick="loginBtn()">로그인</button>  <!--onclick : 버튼 누르면 함수 호출-->
+      </form>
+    </section>
+  </div>
+  <script>
+    function loginBtn(){
+      //alert("함수를 호출합니다.");
+      //document : 화면 전체
+      //getElementById : 화면 전체에서 id를 찾는 것 
+      var id = document.getElementById("id").value;
+      if(id==""){
+        //alert("아이디 또는 전화번호를 입력해 주세요.");
+        var txt = "아이디 또는 전화번호를 입력해 주세요.";
+        document.getElementById("err").innerText = txt;
+        document.getElementById("id").focus();
+      }
+      var pw = document.getElementById("pw").value;
+      //alert("아이디 : " + id + ", " + "패스워드 : " + pw);
+
+      //action 주소로 이동하는 명령어. form의 name을 사용
+      loginFrm.submit();
+    }
+  </script>
+</body>
+</html>
