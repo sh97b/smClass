@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <title>Document</title>
+  <style>
+    h3{
+      width: 300px;
+      height: 100px;
+      border: 1px solid black;
+      white-space: nowrap;     /*줄단락을 없앰*/
+      overflow: hidden;        /*테두리를 벗어난 것을 숨김*/
+      text-overflow: ellipsis; /*말줄임표*/
+    }
+    /*hover: 마우스를 올렸을 때*/
+    h3:hover{
+      white-space: inherit;
+      overflow: visible;
+    }
+    div{
+      width: 300px;
+      height: 100px;
+      border: 1px solid black;
+      white-space: nowrap;
+      overflow: scroll;
+    }
+    h2{
+      width: 800px;
+      height: 200px;
+      border: 1px solid black;
+
+      word-spacing: 40px; /*단어간격*/
+      letter-spacing: 30px; /*글자간격(자간)*/
+
+      /* 왼쪽(-)/오른쪽  위(-)/아래  */
+      text-shadow: 5px 5px 5px rgba(137, 189, 233, 0.687); /*폰트그림자*/
+      color: rgba(55, 147, 209, 0.574);
+      /*
+      color: cornflowerblue;
+      color: #123456;
+      */
+      font-size: 50px;
+      text-align: center; /*글자 가운데 정렬*/
+      margin: 0 auto; /*사각 모델을 가운데 정렬*/
+      line-height: 200px; /*세로로 가운데 정렬*/
+      /*
+      padding-top: 65px; box-sizing: border-box; //세로 가운데 정렬
+      */
+    }
+    p{
+      text-decoration: line-through;/*line-through, underline, overline, none*/
+
+      width: 800px;
+      height: 700px;
+      border: 1px solid black;
+      font-size: 17px;
+      font-weight: 700; /*글자 두께*/
+      line-height: 60px; /*줄간격, 위아래로30px*/
+    }
+  </style>
+</head>
+<body>
+  <h3>
+    오늘따라 왤케 힘들지???????? 원래 하루에 12시간 자는데 요즘 매일 6~7시간 잤더니 ㅁㅊ겟네 앞으로 이렇게 6개월을 살아야 한다니
+  </h3>
+  <div>
+    배고프고졸리고집에가고싶어요흑흑흑흑흑흑흑흑
+  </div>
+  <h2>글꼴 관련 스타일</h2>
+  <p>
+    [서울=뉴시스] 이예슬 기자 = 오는 6~11일 서울에 전 세계 인기 작가들이 모여 축제를 벌인다.
+    
+    문화체육관광부는 한국문학번역원과 함께 서울 종로구 혜화동 JCC아트센터에서 '입자와 파동'을 주제로 '2024 서울 국제작가축제'를 개최한다고 5일 밝혔다. 2006년부터 지속돼 온 작가와 독자가 소통하는 장이다.
+    
+    '입자와 파동'은 우리 삶 속에서 대립적이거나 상충적이라고 생각했던 것들 간의 관계를 다시 살펴보고 상존을 포용하는 것이 문학의 가치라는 의미를 담고 있다. 고전 역학에서는 모순적 관계로 봤던 빛의 입자성과 파동성의 관계를 현대 양자역학에서는 상존한다고 보는 것에 착안했다.
+  </p>
+</body>
+</html>
