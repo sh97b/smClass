@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<head>
+  <title>width 길이 측정</title>
+  <style>
+    *{
+      margin: 0; padding: 0;
+    }
+    header{
+      width: 1200px;
+      height: 200px;
+      border: 3px solid black; /*border값 포함 1206px*/
+      background: yellow;
+      margin: 5px auto; /*위아래 0, 좌우 auto*/
+    }
+    div{
+      width: 400px;
+      height: 150px;
+      border: 10px solid black;
+      box-sizing: border-box;
+    }
+    #d01{
+      background: green;
+      float: left;
+      padding-left: 50px;
+    }
+    #d02{
+      background: pink;
+      float: left;
+    }
+    #d03{
+      background: gray;
+      float: left;
+    }
+  </style>
+</head>
+<body>
+  <header>
+  <div id="d01">가나다</div>
+  <div id="d02">가나다</div>
+  <div id="d03"></div>
+
+  </header>
+</body>
+</html>

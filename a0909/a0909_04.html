@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<head>
+  <title>position - absolute</title>
+  <style>
+    *{
+      margin: 0; 
+      padding: 0;
+    }
+    #container{
+      width: 800px;
+      height: 300px;
+      background: rgb(149, 130, 166);
+      border: 5px solid black;
+      margin: 0 auto;
+      box-sizing: border-box;
+      position: relative;
+    }
+    #d01{
+      width: 300px;
+      height: 100px;
+      background: rgb(84, 144, 84);
+      margin-top: 50px;
+      margin-left: 100px;
+      box-sizing: border-box;
+    }
+    p{
+      width: 100px;
+      height: 100px;
+      background: pink;
+      position: absolute; /*absolute: 부모의 기준에서 이동. 부모가 relative가 아니면 불가*/
+      left: 0; /*d01에 position: relative가 없기 때문에 그 상위 태그인 container 기준으로 적용.*/
+      top: 0; /*만약 어떠한 태그에도 position: relative가 지정되지 않으면 body를 기준으로 함*/
+      box-sizing: border-box;
+    }
+  </style>
+</head>
+<body>
+  <div id="container">
+    <div id="d01">
+      <p>너무너무졸리다</p>
+    </div>
+  </div>
+</body>
+</html>

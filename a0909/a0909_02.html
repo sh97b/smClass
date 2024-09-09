@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<head>
+  <style>
+    *{
+      margin: 0;
+      padding: 0;
+    }
+    img{
+      width: 200px;
+      display: inline-block;
+    }
+    #i01:hover{
+      visibility: hidden;
+    }
+    span{ /*span은 원래 inline요소. width, height 조절하고 싶으면 block/inline-block해야함*/
+      width: 200px;
+      height: 100px;
+      display: inline-block;
+      padding-left: 30px;
+      margin-left: 50px;
+    }
+    #s01{
+      background: yellow;
+      border: 3px solid black;
+    }
+    #s02{
+      background: green;
+      border: 3px solid black;
+    }
+    #s03{
+      background: gray;
+      border: 3px solid black;
+    }
+
+    /*display: none; 이미지를 위치값까지 전부 없앰*/
+    /*visibility: hidden; 공간은 남겨놓겨놓고 이미지만 없앰*/
+    
+  </style>
+</head>
+<body>
+  <span id="s01">가나다</span>
+  <span id="s02">가나다</span>
+  <span id="s03">가나다</span>
+  <br/>
+  <img src="images/a01.jpg">
+  <img src="images/a02.jpg" id="i01">
+  <img src="images/a03.jpg">
+
+</body>
+</html>

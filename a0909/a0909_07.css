@@ -1,0 +1,203 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@500&display=swap');
+*{
+  margin: 0; padding: 0;
+
+  font-family: "Noto Sans KR", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+
+  text-decoration: none;
+  color: inherit;
+}
+
+#top_menu{
+  width: 100%;
+  height: 35px;
+  background: #202020;
+  text-align: center;
+}
+#top_menu ul{
+  display: flex;
+  list-style: none;
+  float: right;
+  color: white;
+  margin-right: 100px;
+}
+#top_menu ul li{
+  margin-left: 20px;
+  line-height: 32px;
+  font-size: 13px;
+}
+
+#main_menu{
+  width: 100%;
+  height: 81px;
+  text-align: center;
+  position: relative;
+}
+
+#main_menu #logo{
+  width: 100px;
+  height: 30px;
+  background: url(images/ico_set.png) -320px -385px no-repeat;
+  background-size: 800px 800px;
+  position: absolute;
+  left: 40px;
+  top: 25px;
+}
+
+#main_menu ul{
+  width: 750px;
+  height: 40px;
+  margin: 0 auto;
+  list-style: none;
+  position: relative;
+  top: 23px;
+}
+
+#main_menu ul li{
+  float: left;
+  margin-right: 60px;
+  color: #101010;
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 32px;
+}
+
+#main_menu #icon{
+  width: 130px;
+  height: 52px;
+  position: relative;
+  float: right;
+  top: -25px;
+}
+
+#main_menu a{
+  font-size: 12px;
+  font-weight: 700;
+  position: relative;
+  top: -20px;
+}
+
+#main_menu span{
+  display: inline-block;
+  width: 150px;
+  position: relative;
+  float: left;
+  left: -20px;
+  top: 20px;
+}
+
+#main_menu #a1{
+  width: 32px;
+  height: 32px;
+  display: inline-block;
+  background: url(images/ico_set.png) -584px -320px no-repeat;
+  background-size: 800px 800px;
+  letter-spacing: -2px;
+}
+#main_menu #a2{
+  width: 32px;
+  height: 32px;
+  display: inline-block;
+  background: url(images/ico_set.png) -628px -320px no-repeat;
+  background-size: 800px 800px;
+  letter-spacing: -2px;
+}
+
+#top_img{
+  width: 100%;
+  height: 640px;
+  background: url(images/main_top.jpg) no-repeat;
+  background-size: cover;
+  position: absolute;
+}
+#top_img div{
+  width: 600px;
+  height: 450px;
+  margin: 0 auto;
+  position: relative;
+  left: -440px;
+  top: 70px;
+}
+
+#top_img div a{
+  text-decoration: none;
+  color: #fff;
+}
+#top_1{
+  display: block;
+  width: 70px;
+  height: 30px;
+  color: #101010;
+  background: white;
+  text-align: center;
+  line-height: 26px;
+  margin-bottom: 26px;
+  font-weight: bold;
+}
+#top_2{
+  width: 223px;
+  height: 42px;
+  display: block;
+  font-size: 28px;
+  border-bottom: 1px solid #fff;
+  font-weight: 600;
+  margin-top: 15px;
+  margin-bottom: 5px;
+}
+#top_3{
+  width: 450px;
+  height: 128px;
+  display: block;
+  font-size: 52px;
+}
+
+#top_4{
+  display: inline-block;
+  width: 90px;
+  height: 75px;
+  font-size: 18px;
+  padding-top: 20px;
+}
+#top_4-1 span{
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  position: relative;
+  top: 30px;
+  margin-right: 5px;
+  background: url(../images/img_main_ico.png) no-repeat -550px -30px;
+  background-size: 800px 800px;
+}
+#top_4-2 span{
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  position: relative;
+  top: 30px;
+  margin-right: 5px;
+  background: url(../images/img_main_ico.png) no-repeat -580px -30px;
+  background-size: 800px 800px;
+}
+
+
+
+#top_5{
+  display: block;
+  width: 230px;
+  height: 56px;
+  font-size: 40px;
+  color: white;
+  font-weight: 600;
+  position: relative;
+  top: -20px;
+  left: -5px;
+}
+
+#top_6{
+  width: 130px;
+  height: 28px;
+  margin-top: 30px;
+}
