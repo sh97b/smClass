@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<head>
+  <title>회원가입창 만들기</title>
+  <style>
+    *{margin: 0; padding: 0;}
+    li{
+      width: 120px; height: 40px;
+      line-height: 40px;
+      text-align: center;
+      border: 1px solid black;
+    }
+    /*건강에 좋은 식품 1*/
+    #u01 li:nth-of-type(2){background: yellow;}
+    /*#u01 li:nth-child(n) : 중간에 다른 태그가 들어가면 그 태그도 자식으로 받아들여서 n번째 태그가 됨*/
+
+
+    /*건강에 좋은 식품 2*/
+    #u02{color: blue; font-weight: 900;}
+
+    #u02 li:nth-child(2n){font-size: 25px; font-weight: 800;}
+    /*2의 배수에 적용*/
+    #u02 li:nth-child(2n+1){color: red;}    /*홀수에 적용
+    == #u02 li:nth-child(odd){color: red;}*/
+
+    #u02 li:nth-child(2), #u02 li:last-child{background: yellow;}
+    #u02 li:nth-child(3){background: pink;}
+    #u02 li:nth-child(4), #u02 li:nth-child(6){background: green;}
+    #u02 li:first-child{border-top-left-radius: 10px;border-top-right-radius: 10px;} /*첫번째*/
+    #u02 li:last-child{border-bottom-left-radius: 10px;border-bottom-right-radius: 10px;} /*마지막*/
+
+    /*건강에 좋은 식품 3*/
+    .yellow{background: yellow;}
+    .green{background: green;}
+    #pink{background: pink;}  
+  </style>
+</head>
+<body>
+  <h2>건강에 좋은 식품 1</h2>
+  <ul id="u01">
+    <li>블루베리</li>
+    <li>귀리</li>
+    <h2>h2태그</h2>
+    <li>토마토</li>
+    <li>시금치</li>
+    <li>적포도주</li>
+    <li>브로콜리</li>
+    <li>견과류</li>
+  </ul>
+  <hr>
+  <h2>건강에 좋은 식품 2</h2>
+  <ul id="u02">
+    <li>블루베리</li>
+    <li>귀리</li>
+    <h2>h2태그</h2>
+    <!--#u02 li:nth-child(3)를 쓰면
+    -->
+    <li>토마토</li>
+    <li>시금치</li>
+    <li>적포도주</li>
+    <li>브로콜리</li>
+    <li>견과류</li>
+  </ul>
+  <hr>
+  <h2>건강에 좋은 식품 3</h2>
+  <ul>
+    <li>블루베리</li>
+    <li class="yellow">귀리</li>
+    <li id="pink">토마토</li>
+    <li class="green">시금치</li>
+    <li>적포도주</li>
+    <li class="green">브로콜리</li>
+    <li class="yellow">견과류</li>
+  </ul>
+
+</body>
+</html>

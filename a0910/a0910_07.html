@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<head>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css" integrity="sha512-10/jx2EXwxxWqCLX/hHth/vu2KY3jCF70dCQB8TSgNjbCVAC/8vai53GfMDrO2Emgwccf2pJqxct9ehpzG+MTw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>a0910_02 혼자서 다시 만들어보기</title>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap');
+
+      *{
+        margin: 0; padding: 0;
+        font-family: "Noto Sans KR", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: 400;
+        font-style: normal;
+      }
+
+      ul, ol{}
+    </style>
+</head>
+<body>
+  <section>
+    <h1>NOTICE</h1>
+    <div class="wrapper">
+      <form action="#" name="sForm" method="get">
+        <select name="category" id="">
+          <option value="all">전체</option>
+          <option value="btitle">제목</option>
+          <option value="bcontent">내용</option>
+          <option value="name">작성자</option>
+        </select>
+        <input type="text" name="search_txt" id="search_txt">
+        <button type="button"><i class="fa-solid fa-magnifying-glass"></i></button>
+      </form>
+    </div>
+    <table>
+      <colgroup>
+        <col width="">
+        <col width="">
+        <col width="">
+        <col width="">
+        <col width="">
+      </colgroup>
+
+      <thead>        
+        <tr>
+          <th>No.</th>
+          <th>제목</th>
+          <th>작성자</th>
+          <th>작성일</th>
+          <th>조회수</th>
+        </tr>
+      </thead>
+      <tbody id="tbody"></tbody>
+
+      <script>
+        var data = "";
+        for(var i = 0; i<=10; i++){
+          data += "<tr>";
+          data += "<td>"+i+"</td>";
+          data += "<td>예방관련 안내</td>";
+          data += "<td>관리자</td>";
+          data += "<td>2024-09-10	</td>";
+          data += "<td>100</td>";
+          data += "<tr>";
+        }
+        document.getElementById("tbody").innerHTML = data;
+      </script>
+    </table>
+  </section>
+</body>
+</html>
