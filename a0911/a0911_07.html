@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<head>
+  <link rel="stylesheet" type="text/css" href="css/a0911_07.css">
+  <title>Document</title>
+</head>
+<body>
+  <table>
+    <colgroup>
+      <col width="10%">
+      <col width="*">
+      <col width="15%">
+      <col width="15%">
+      <col width="15%">
+    </colgroup>
+    <tr>
+      <th>No.</th>
+      <th>제목</th>
+      <th>작성자</th>
+      <th>작성일</th>
+      <th>조회수</th>
+    </tr>
+    <tbody id="tbody"></tbody>
+    <script>
+      var data = "";
+      for(var i=0; i<=10; i++){
+        data += "<tr>";
+        data += "<td>"+i+"</td>";
+        data += "<td>예방관련 안내</td>";
+        data += "<td>관리자</td>";
+        data += "<td>2024-09-11</td>";
+        data += "<td>100</td>";
+        data += "<tr/>";
+      }
+      document.getElementById("tbody").innerHTML=data;
+    </script>
+  </table>
+</body>
+</html>

@@ -1,0 +1,13 @@
+*{margin: 0; padding: 0;}
+table{
+  /*width를 px로 조절하면 고정형 그리드, %단위로 조절하면 가변형 그리드*/
+  width: 80%; 
+  border-top: 2px solid #111;
+  margin: 30px auto;
+}
+table, th, td{border-collapse: collapse;}
+th, td{
+  border-bottom: 1px solid #111;
+  text-align: center;
+  height: 40px;
+}
