@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>animation</title>
+  <style>
+    div{
+      width: 200px; height: 200px;
+      background: skyblue;
+      border: 3px solid blue;
+      margin: 0 auto;
+    }
+
+    div:hover{      
+      /*
+      animation-name: chg-back;
+      animation-duration: 3s;
+      animation-iteration-count: infinite; 무한
+      animation-direction: alternate; normal, alternate: 양방향
+      */
+      animation: chg-back 1s infinite alternate, rotate 2s infinite alternate;
+    }
+    
+    @keyframes rotate {
+      from{
+        transform: perspective(120px) rotateX(0deg);
+      }
+      to{
+        transform: perspective(120px) rotateX(180deg);
+      }
+    }
+
+    @keyframes chg-back{
+      from{
+        background: skyblue;
+        border: 2px solid black;
+      }
+      to{
+        background: blue;
+        border: 3px solid black;
+        border-radius: 50%;
+      }
+    }
+
+  </style>
+</head>
+<body>
+  <div>
+    오늘 떡볶이를 먹을까<br/>아니면 마라탕을 먹을까
+  </div>
+</body>
+</html>

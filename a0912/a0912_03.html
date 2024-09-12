@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>transition</title>
+  <style>
+    *{margin: 0; padding: 0;}
+    .d01{
+      width: 100px; height: 100px;
+      background: rgb(158, 134, 195);
+      border: 3px solid black;
+
+      /*
+      transition: all 1s; 속성선택, 진행시간
+      transition-timing-function: ease-in; 트랜지션 속도 효과
+      transition-delay: 1s; 지연시간
+      */
+    }
+    .d01:hover{
+      width: 200px; height: 200px;
+      background: rgb(199, 25, 25);
+      border-radius: 20px;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <div class="d01">
+    마라탕먹고싶어흑흑흑
+  </div>
+</body>
+</html>

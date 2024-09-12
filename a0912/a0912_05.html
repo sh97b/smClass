@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .box{
+      width: 100px; height: 100px;
+      margin: 60px auto;
+      border: 3px solid black;
+    }
+    .box:hover{
+      animation: rotate 2s infinite alternate, 
+                 chg-back 2s infinite alternate;
+    }
+
+    @keyframes rotate{
+      from{
+        transform: perspective(120px) rotateX(0deg) rotateY('0deg');
+      }
+      50%{
+        transform: perspective(120px) rotateX(-180deg) rotateY(0deg);
+      }
+      to{
+        transform: perspective(120px) rotateX(-180deg) rotateY(-180deg);
+      }
+    }
+
+    @keyframes chg-back{
+      from{
+        background: red;
+      }
+      50%{
+        background: blue;
+      }
+      to{
+        background: rebeccapurple;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="box"></div>
+</body>
+</html>

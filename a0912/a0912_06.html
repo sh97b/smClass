@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .main{
+      width: 800px; height:100px;
+      border: 3px solid black;
+      margin: 0 auto;
+      text-align: center;
+      line-height: 100px;
+    }
+
+    .d01{
+      width: 100px; height: 100px;
+      background: yellow;
+      border: 1px solid black;
+      animation: boxMove 2.5s infinite alternate;
+    }
+
+
+    @keyframes boxMove {
+      from{
+        background: yellow;
+      }
+      50%{
+        background: red;
+        transform: translate(350px);
+        transition-timing-function: ease;
+      }
+      to{
+        background: blue;
+        transform: translate(700px);
+        transition-timing-function: ease;
+      }
+    }
+
+  </style>
+</head>
+<body>
+  <div class="main">
+    <div class="d01">
+      추워요
+    </div>
+  </div>
+</body>
+</html>
