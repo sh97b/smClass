@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>반복문 연습</title>
+</head>
+<body>
+  <script>
+    var num = parseInt(Math.random() * 100)+1;
+
+    var i = 0;
+    while(i<10){
+      var input = prompt((i+1)+"번째 도전! 숫자를 입력하세요.");
+
+      if(input < num){
+        alert("입력한 숫자가 작습니다. 더 큰 수를 입력하세요.");
+      }else if(input > num){
+        alert("입력한 숫자가 큽니다. 더 작은 수를 입력하세요.");
+      }else{
+        alert("정답입니다.");
+        break;
+      }
+      i++;
+    }
+    document.write("랜덤 숫자 : " + num +"<br>");
+
+
+
+    // var lotto = parseInt(Math.random() * 45)+1;
+    // document.write("로또번호 : " + lotto);
+
+
+
+    // // 랜덤함수. 랜덤하게 실수가 나옴( 0 <= x < 1 소숫점)
+    // // 0.0000000000000000 ~ 0.9999999999999999
+    // // 0.0000000000000000 * 10 ~ 0.9999999999999999
+    // // 0+1 <= parseInt(x * 10) < 11
+    // document.write(parseInt(Math.random()*10)+1); //0-10까지 랜덤숫자
+    // document.write(parseInt(Math.random()*100)); //0-99까지 랜덤숫자
+    // document.write(parseInt(Math.random()*45)+1); //0-45까지 랜덤숫자
+    // document.write(parseInt(Math.random()*200)+1); //0-200까지 랜덤숫자
+    // document.write(parseInt(Math.random()*150)+1); //0-150까지 랜덤숫자
+    // document.write(parseInt(Math.random()*20)); //0-19까지 랜덤숫자
+
+
+
+    // var i = 0;    //초기값
+    // while(i<10){  //조건식
+    //   document.write(i+"<br><hr>");
+    //   i++;  //증감식
+    // }
+
+    //   //초기값    조건식    증감식
+    // for(var i = 0; i < 10; i++){
+    //   document.write(i+"<br>");
+    // }
+
+
+
+
+    // // 000 001 002 003 ... 999
+
+    // for(var i = 0; i <= 9; i++){    
+    //   for(var j = 0; j <= 9; j++){
+    //     for(var k = 0; k <= 9; k++){
+    //       document.write("" + i + j + k + "<br>");
+    //     }
+    //   }
+    // }
+
+
+
+    // for(var i = 2; i<=9; i++){
+    //   document.write("<br>[ " + i + "단 ]<br>");
+    //   for(var j = 1; j <= 9; j++){
+    //     // if(j % 2 != 0){
+    //     //   continue;  //마주친 순간 그 조건을 한번 건너뛰고 반복문이 끝날 때까지 계속 돌림
+    //     // }
+    //     if(j==5){
+    //       break;  //마주친 순간 반복문을 중지시킴
+    //     }
+    //     document.write(i + " * "+ j + " = " + (i*j) + "<br>");
+    //   }
+    // }
+  </script>
+</body>
+</html>

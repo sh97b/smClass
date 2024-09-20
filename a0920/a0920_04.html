@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>if else</title>
+</head>
+<body>
+  <script>
+    //alert, console.log, confirm, prompt, document.write   확인할 때 쓰는 것들
+    var result = confirm("로그아웃을 하시겠습니까?");
+    if(result){
+      document.write("로그아웃 되었습니다.");
+    }else{
+      document.write("로그아웃이 취소되었습니다.");
+    }
+
+
+
+    // //국어 점수, 영어 점수, 수학 점수를 입력받아 평균 60점을 넘으면 합격, 아니면 불합격 출력
+    // var kor = Number(prompt("국어 점수를 입력하시오."));
+    // var eng = Number(prompt("영어 점수를 입력하시오."));
+    // var math = Number(prompt("수학 점수를 입력하시오."));
+
+    // var avg = ((kor + eng + math) / 3).toFixed(2);
+    // if(avg>=60){
+    //   document.write("합격입니다.");
+    // }else{
+    //   document.write("불합격입니다.");
+    // }
+
+
+
+
+    // //숫자를 입력받아 삼항식으로 짝수인지 홀수인지 출력
+    // var a = Number(prompt("숫자를 입력하시오."));
+
+    // var result =  a % 2 == 0 ? "짝수입니다." : "홀수입니다.";
+    // document.write(result);
+
+    // //if문으로 출력
+    // var b = Number(prompt("숫자를 입력하시오."));
+
+    // if(b % 2 == 0){
+    //   document.write("짝수입니다.<br>");
+    // }else{
+    //   document.write("홀수입니다.");
+    // }
+
+
+
+
+    // var num = Number(prompt("숫자를 입력하세요."));
+    // if(num < 500){
+    //   document.write("500보다 작은 수 입니다. <br>");
+    // }else{
+    //   document.write("500보다 큰 수 입니다. <br>");
+    // }
+    // document.write("프로그램을 종료합니다. <br>");
+  </script>
+</body>
+</html>

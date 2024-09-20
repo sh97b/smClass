@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>삼항연산자</title>
+</head>
+<body>
+  <script>
+    //숫자 3개를 입력받아 3개 출력
+    var a = Number(prompt("숫자 1을 입력하시오."));
+    var b = Number(prompt("숫자 2을 입력하시오."));
+    var c = Number(prompt("숫자 3을 입력하시오."));
+
+    //10, 3, 5 입력하면 
+    var result = (a > b) ? ((a > c) ? a : c) : ((b > c) ? b : c);
+    document.write("3개 숫자 중 가장 큰 수 : " + result + "<br>");
+    document.write(a + ", " + b + ", " + c + "<br>");
+
+
+    // //숫자 한 개를 입력받아 짝수이면 짝수입니다. 홀수이면 홀수입니다. 라고 출력
+    // var num = Number(prompt("숫자를 입력하시오."));
+
+    // var result = num % 2 == 0 ? "짝수입니다." : "홀수입니다.";
+    // document.write(result);
+    // if(num % 2 == 0){
+    //   document.write("짝수입니다.");
+    // }else{
+    //   document.write("홀수입니다.");
+    // }
+
+
+
+    // // 두 수를 입력받아 두 수를 출력하시오.
+    // var num1 = Number(prompt("첫 번쨰 수를 입력하시오"));
+    // var num2 = Number(prompt("두 번쨰 수를 입력하시오"));
+
+    // document.write(num1 + "<br>" + num2 + "<br><br>");
+    
+    // // 삼항식을 사용해서 큰 수를 출력하시오
+    // var result = (num1 > num2) ? num1 : num2;
+    // document.write("더 큰 수는 : " + result);
+
+
+    // var a = 10;
+    // var b = 3;
+
+    // var result = (a > b) ? "정답입니다." : "오답입니다.";
+    
+    // document.write(result);
+  </script>
+</body>
+</html>
