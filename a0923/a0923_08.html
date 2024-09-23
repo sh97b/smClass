@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    // 오늘 날짜 출력
+    var today = new Date();
+
+    var tYear = today.getFullYear()
+    var tMonth = today.getMonth() + 1;
+    var tDate = today.getDate();
+    var tDay = today.getDay();
+    if(tMonth < 10){
+      tMonth = "0" + tMonth;
+    }
+
+    if(tDate < 10){
+      tDate = "0" + tDate;
+    }
+
+    if(tDay == 0){
+      tDay = "일요일";
+    }else if(tDay == 1){
+      tDay = "월요일";
+    }else if(tDay == 2){
+      tDay = "화요일";
+    }else if(tDay == 3){
+      tDay = "수요일";
+    }else if(tDay == 4){
+      tDay = "목요일";
+    }else if(tDay == 5){
+      tDay = "금요일";
+    }else{
+      tDay = "토요일";
+    }
+
+    var tday = tYear + "/"+ tMonth + "/" + tDate + "/" + tDay;
+    document.write(tday + "<br>");
+
+
+    // 5자리 숫자를 입력받아 숫자의 합을 구하시오
+    // 12345 = 15
+    // charAt 사용 > Number
+
+    var num = prompt("일곱자리 숫자를 입력하시오");
+
+    var sum = 0;
+
+    for(var i = 0; i < num.length; i++){
+      sum += Number(num.charAt(i));
+    }
+    
+    document.write("합계 : " + sum);
+
+    
+  </script>
+</body>
+</html>

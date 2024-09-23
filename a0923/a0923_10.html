@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    *{margin: 0; padding: 0;}
+    #wrap{
+      width: 2000px; height: 3000px;
+      background: url(images/resom2.jpg);
+      border: 1px solid black;
+    }
+    #d_wrap{
+      position: fixed;
+    }
+    #txt{
+      width: 200px; height: 100px;
+      font-size: 30px; text-align: center;
+      background: yellow;
+      border: 1px solid black;
+    }
+    #img{
+      width: 300px; height: 200px;
+      background: url(images/a01.jpg);
+      border: 1px solid white;
+    }
+  </style>
+</head>
+<body>
+  <div id="wrap">
+    <div id="d_wrap">
+      <div id="txt">000</div>
+      <button onclick="b01()" id="b01">500 하단이동</button>
+      <button onclick="b02()" id="b02">1000 하단이동</button>
+      <button onclick="b03()" id="b03">2000 하단이동</button>
+      <div id="img"></div>
+    </div>
+  </div>
+
+  <script>
+    // window 이벤트 실행문
+    window.addEventListener("scroll", function(){
+      window.scrollY;
+      window.scrollX;
+      console.log(window.scrollY);
+      console.log(window.scrollX);
+
+      document.getElementById("txt").innerText = window.scrollY;
+
+      // 높은 숫자를 먼저 써야 함
+      if(window.scrollY > 2000){
+        document.getElementById("img").style.backgroundImage = "url('images/a02.jpg')";
+      }else if(window.scrollY > 1000){
+        document.getElementById("img").style.backgroundImage = "url('images/a03.jpg')";
+      }else if(window.scrollY > 500){
+        document.getElementById("img").style.backgroundImage = "url('images/a04.jpg')";
+      }else{
+        document.getElementById("img").style.backgroundImage = "url('images/a01.jpg')";
+      }
+    });
+
+    function b01(){
+      window.scrollTo({top : 500, behavior : "smooth"});
+    }
+    function b02(){
+      window.scrollTo({top : 1000, behavior : "smooth"});
+    }
+    function b03(){
+      window.scrollTo({top : 2000, behavior : "smooth"});
+    }
+
+
+
+    // 이벤트 실행문
+    // document.getElementById("b01").addEventListener('click', function(){
+    //   alert("버튼 클릭");
+    // });
+  </script>
+
+</body>
+</html>
