@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+  <title>이벤트</title>
+
+  <script>
+    $(function(){
+      // 문법 입력
+      $("#colorBtn").click(function(){
+        alert("버튼 클릭");
+        $("#wrap").css("background", "yellow");
+      });
+
+      $("#txtBtn").click(function(){
+        $("#wrap").text("안녕하세요");
+      });
+
+      $("#h1Btn").click(function(){
+        $("h1").text("오늘은너무피곤해요");
+        $("h1").css("color", "blue");
+      });
+    });
+
+    // function btn(){
+    //   document.getElementById("wrap").style.backgroundColor = "yellow";
+    // }
+  </script>
+
+  <style>
+    #wrap{width: 300px; height: 200px; border: 1px solid black;}
+  </style>
+</head>
+<body>
+  <h1>제목입니다</h1>
+  <div id="wrap">00</div>
+  <button id="colorBtn">컬러 변경</button>
+  <button id="txtBtn">글자 변경</button>
+  <button id="h1Btn">h1 변경</button>
+  
+</body>
+</html>

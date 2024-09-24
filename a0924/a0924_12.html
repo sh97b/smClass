@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <h1>취미</h1>
+  <form action="http://www.naver.com" name="frm" method="get">
+    <input type="checkbox" name="game" id="game" class="hobby" value="game">
+    <label for="game">게임</label><br>
+    <input type="checkbox" name="golf" id="golf" class="hobby" value="golf">
+    <label for="game">골프</label><br>
+    <input type="checkbox" name="swim" id="swim" class="hobby" value="swim">
+    <label for="game">수영</label><br>
+    <input type="checkbox" name="run" id="run" class="hobby" value="run">
+    <label for="game">조깅</label><br>
+    <input type="checkbox" name="book" id="book" class="hobby" value="book">
+    <label for="game">독서</label><br>
+
+    <button type="button" onclick="hobbyBtn()">확인</button>
+  </form>
+  
+  <script>
+    function hobbyBtn(){
+      alert("버튼 클릭");
+
+      var count = 0;
+      var checkOk = document.querySelectorAll(".hobby");
+      console.log(document.querySelectorAll(".hobby").length);
+
+      // 체크박스 체크된 개수 확인
+      for(var i = 0; i < checkOk.length; i++){
+        if(checkOk[i].checked == true){
+          count++;
+        }
+      }
+
+      // 비교
+      if(count < 4){
+        alert("4개 이상 선택하셔야 합니다.");
+        if(confirm("취미를 모두 선택할까요?")){
+          // for(var j = 0; j < checkOk.length; j++){
+          //   document.querySelector(".hobby")[i].checked == true;
+          // }
+          // forEach
+          document.querySelectorAll(".hobby").forEach(function(d){
+            console.log(d);
+            d.checked = true;
+          });
+          
+        }
+        return false;
+      }
+
+      console.log("총 체크 개수 : " + count);
+      //frm.submit();
+    }
+  </script>
+</body>
+</html>

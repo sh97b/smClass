@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ㅁ</title>
+</head>
+<body>
+  <script>
+    // 함수 선언
+    function a_input(){
+      console.log(1);
+      console.log(2);
+      b_input();  // 함수 호출
+    }
+
+    // 함수 선언
+    function b_input(){
+      document.write("안녕하세요");
+    }
+
+    // 함수 선언  ↓매개변수
+    function calc(a, b, c){
+      // alert("합계 : " + (a + b + c));
+      return(a + b + c);
+    }
+
+    // txt1, 2, 3>calc에 입력, 
+    //send_txt에 출력
+
+
+    function send_txt(){
+      var a = Number(document.querySelector("#txt1").value);
+      var b = Number(document.querySelector("#txt2").value);
+      var c = Number(document.querySelector("#txt3").value);
+
+      var data = calc(a, b, c);
+      document.getElementById("c1").innerText = data;
+    }
+
+
+
+    // function send_txt(){
+    //   var data = calc(50, 50, 30);
+    //   document.getElementById("c1").innerText = data;
+    // }
+  </script>
+
+  <button onclick="a_input()">함수 호출</button>
+  <br>
+  <div id="c1">0</div>
+  <input type="text" id="txt1"><br>
+  <input type="text" id="txt2"><br>
+  <input type="text" id="txt3"><br>
+  <button onclick="send_txt()">확인</button>
+
+</body>
+</html>
