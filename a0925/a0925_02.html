@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+  <title>제이쿼리</title>
+
+  <script>
+    $(function(){
+
+      // 슬라이드 열림
+      $(".btn1").click(function(){
+        $(".box").stop();
+        $(".box").slideDown(1000, "linear", function(){});
+      });
+
+      // 슬라이드 닫힘
+      $(".btn2").click(function(){
+        $(".box").stop();
+        $(".box").slideUp(1000, "linear", function(){});
+      });
+
+      $(".btn3").on("click", function(){
+        $(".box").stop();
+        $(".box").fadeIn(1000, "linear", function(){});
+        // $(".box").slideUp(1000, "linear", function(){});
+      });
+
+      // toggle 효과
+      $(".btn4").on("click", function(){
+        $(".box").stop();
+        $(".box").slideToggle(150, "linear");
+      });
+
+
+      // $("#in").on("mouseover focus", function(){
+      //   $(this).css({"border" : "4px solid black", "background" : "yellow"});
+      // });
+
+      // $("#in").off("mouseover");
+      // $("#in").trigger("mouseover");
+
+    }); // 제이쿼리구문
+  </script>
+  <style>
+    .content{
+      width: 400px; 
+      border: 1px solid black;
+    }
+  </style>
+</head>
+<body>
+  <button class="btn1">슬라이드펼침</button>
+  <button class="btn2">슬라이드닫힘</button>
+  <button class="btn3">페이드인</button>
+  <button class="btn4">토글</button>
+  <br>
+
+  <div class="box">
+    <div class="content">
+      채소에 많이 들어 있는 ‘식이섬유’의 섭취량이 적으면 스트레스나 우울 지수가 높아지고 정신건강에 영향을 준다는 연구 결과가 나왔다.
+      박민선 서울대병원 가정의학과 교수팀은 국내 40~79세 성인 1만1288명을 대상으로 성별에 따른 ‘식이섬유 섭취와 정신건강의 연관성’을 분석해 이같은 결과가 나왔다고 23일 전했다. 이번 연구는 국제학술지 ‘영양소(Nutrients)’ 최신호에 실렸다.
+
+      연구팀은 한국인 유전체 역학 연구 코호트(KoGES)에 등록된 1만1288명(남성 4112명, 여성 7176명)의 검진 데이터를 바탕으로, 일일 식이섬유 섭취량을 1~5분위로 나눴다. 이후 식이섬유 최소 섭취군 5분위 그룹과 나머지 1~4분위 그룹의 정신건강 상태를 성별에 따라 비교했다.
+
+      일일 식이섬유 섭취량은 남성의 경우 ▲1분위(7.58~37.77g) ▲2분위(6.04~7.57g) ▲3분위(4.95~6.03g) ▲4분위(3.77~4.94g) ▲5분위(0.62~3.76g)로, 여성은 ▲1분위(7.56~34.69g) ▲2분위(5.88~7.55g) ▲3분위(5.88~7.55g) ▲4분위(3.60~4.74g) ▲5분위(0.25~3.59g)로 각각 구분했다. 
+
+      정신건강은 ▲높은 스트레스 인식 ▲주관적 건강상태 ▲사회심리적 불편감(일상에서 느끼는 불안함 등) ▲우울의 네 가지 항목으로 평가했고, 나이·흡연·신체활동·소득·생활습관 변수 등을 고려했다.
+
+      분석 결과, 식이섬유 섭취량이 적을수록 정신건강이 악화될 위험성이 커졌다. 식이섬유 최소 섭취군은 나머지 군에 비해 ‘사회심리적 불편감’을 겪을 위험이 남성은 46%, 여성은 53% 증가했다. 또 동일한 비교군에서 식이섬유를 적게 섭취한 남성이 ‘스트레스가 높다’고 인식할 위험이 43% 증가했고, 여성은 우울감을 호소할 위험이 40% 높아졌다.
+    </div>
+  </div>
+
+  <!-- <input id="in" type="text"> -->
+</body>
+</html>

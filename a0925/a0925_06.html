@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+  <title>Document</title>
+
+  <script>
+    $(function(){
+      $("#dataBtn").click(function(){
+        $.ajax({
+
+        url : "js/stuData.json", 
+        type : "get", 
+        data : "", 
+        dataType : "json", 
+
+        success : function(data){
+          
+          var s_data = "";
+          for(var i = 0; i < data.length; i++){
+            var korData = data[i].kor;
+            var engData = data[i].eng;
+            var mathData = data[i].math;
+
+            var allSum = korData + engData + mathData;  
+            var avg = (allSum / 3);        
+
+            s_data += "<tr id='" + (i+1) + "''>";
+            s_data += "<td>" + data[i].no + "</td>";
+            s_data += "<td>" + data[i].name + "</td>";
+            s_data += "<td>" + korData + "</td>";
+            s_data += "<td>" + engData + "</td>";
+            s_data += "<td>" + mathData + "</td>";
+            s_data += "<td>" + allSum + "</td>";
+            s_data += "<td>" + avg.toFixed(2) + "</td>";
+            s_data += "<td><button class='del'>삭제</button></td>";
+            s_data += "<tr>";           
+          }
+          $("#tbody").html(s_data);
+
+          
+          $(".del").click(function(){
+            var delThis = $(this).parent().parent().attr("id");
+            $("#" + delThis).remove();
+          });
+
+
+        },
+        error : function(){
+          alert("실패");
+        }
+
+        }); // ajax
+      }); //dataBtn
+
+    }); //jquery
+  </script>
+
+  <style>
+    h1{text-align: center;}
+    table, th, td{border: 1px solid black; border-collapse: collapse;}
+    table{width: 80%; margin: 0 auto;}
+    th, td{
+      width: 150px; height: 40px;
+      text-align: center;
+    }
+
+  </style>
+
+
+</head>
+<body>
+  <h1>게시판</h1>
+  <button id="dataBtn">데이터 가져오기</button>
+
+    <table>
+      <thead>
+        <tr>
+          <th>번호</th>
+          <th>이름</th>
+          <th>국어</th>
+          <th>영어</th>
+          <th>수학</th>
+          <th>합계</th>
+          <th>평균</th>
+          <th>삭제</th>
+        </tr>
+      </thead>
+      <tbody id="tbody">
+
+      </tbody>
+    </table>
+
+
+</body>
+</html>
