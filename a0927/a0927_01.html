@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+  <title>Document</title>
+
+  <script>
+    $(function(){
+      $("#membership").click(function(){
+
+        // // 3자리 영문자 체크
+        // // ab1 > 영문자가 아닙니다. abc, a2c > 영문자가 아닙니다.
+        // let count = 0;
+        // let eng = $("#eng").val();
+        // for(let i = 0; i < eng.length; i++){
+        //   if(!(eng[i] >= 'a' && eng[i] <= 'z')){
+        //     count++;
+        //   }   
+        // }
+        // if(count > 0){
+        //   alert("영문자가 아닙니다. 다시 입력하세요");
+        //   return false;
+        // }
+
+        // // 문자 키코드
+        // if($("#eng").val() >= 'a' && $("#eng").val() <= 'z'){
+        //   alert("영문자입니다.");
+        // }else{
+        //   alert("영문자가 아닙니다.");
+        // }
+
+        // // 숫자이면서 4자리 이상 입력해야 하고 아니면 에러
+        // // 4자리 이상 숫자를 입력하셔야 합니다.
+        // if($("#number").val().length < 4 || isNaN($("#number").val())){
+        //   alert("4자리 이상 숫자를 입력하셔야 합니다.");
+        //   return false;
+        // }else{
+        //   alert("회원가입이 완료되었습니다.");
+        // }
+
+        // // 숫자인지 아닌지 확인 - 자바스크립트 문법
+        // if(isNaN($("#number").val())){
+        //   alert("숫자만 입력이 가능합니다.");
+        //   return false;
+        // }else{
+        //   alert("");
+        // }
+
+        // // 숫자인지 아닌지 확인 - jquery 문법
+        // if(!$.isNumeric($("#number").val())){
+        //   alert("숫자만 입력이 가능합니다.");
+        //   return false;
+        // }
+
+        // if($("#id").val() == "" || $("#name").val() == ""){
+        //   alert("아이디와 이름을 입력하셔야 합니다.");
+        //   if($("#id").val().length < 3){
+        //     alert("아이디가 세 자리 이상이어야 합니다.");
+        //   }
+        //   return false;
+        // }else{
+        //   alert("회원가입이 완료되었습니다.");
+        //   $("#id").val("");
+        //   $("#name").val("");
+        // }
+
+      }); //#membership 확인 버튼 클릭
+
+    }); //jquery 선언
+  </script>
+
+  <style>
+
+  </style>
+</head>
+
+<body>
+  <h1>회원가입</h1>
+
+  <form action="#" name="frm" method="post">
+    <label>아이디</label>
+    <input type="text" name="id" id="id"><br>
+    <label>번호</label>
+    <input type="text" name="number" id="number"><br>
+    <label>영문자 1개 입력</label>
+    <input type="text" name="eng" id="eng"><br>
+
+    <button type="button" id="membership">확인</button>
+  </form>
+
+</body>
+</html>
