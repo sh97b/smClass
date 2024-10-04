@@ -4,11 +4,12 @@ import random
 
 print(random.random())
 
+# 자바, 자바스크립트는 이렇게햇엇음
 # 0-9
 print(int(random.random() * 10))
-
 # 0-10
 print(int(random.random() * 10)+1)
+
 
 # randint - 랜덤 int 추출 (n부터, m까지(m포함))
 print(random.randint(1,10))
